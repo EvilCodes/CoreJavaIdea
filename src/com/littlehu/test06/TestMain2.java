@@ -22,7 +22,6 @@ public class TestMain2 {
 				}
 			});
 		}
-		
 		for (int i = 0; i < 5; i++) {
 			try {
 				System.out.println(cs.take().get());
@@ -31,9 +30,5 @@ public class TestMain2 {
 			}
 			
 		}
-		
-		
-		
 	}
-
 }
