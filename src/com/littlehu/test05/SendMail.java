@@ -21,9 +21,7 @@ public class SendMail {
 		String host="localhost";
 		
 		
-		
 		try {
-			
 			
 			MailSSLSocketFactory sf=new MailSSLSocketFactory();
 			sf.setTrustAllHosts(true);
@@ -54,9 +52,14 @@ public class SendMail {
 			message.setFrom(new InternetAddress(from));
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 			message.setSubject("这是头部字段");
-			message.setText("我是一个中国人，我的名字叫李小龙");
-			Transport.send(message);
-			System.out.println("Sent message successfully...");
+			message.setText("我叫柴进，我是新兴铸管信息中心的游戏之王，兼信息中心运维部老大,带领小黄和小卢，将要赢取白富美，走向人生巅峰");
+			
+			while (true) {
+				
+				Transport.send(message);
+				System.out.println("Sent message successfully...");
+				Thread.sleep(5000);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
